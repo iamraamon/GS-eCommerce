@@ -24,6 +24,7 @@ import { PlacementsComponent } from './component/placements/placements.component
 import { ContactComponent } from './component/contact/contact.component';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatRadioModule} from '@angular/material/radio';
+import { ProductListComponent } from './component/product-list/product-list.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import {MatRadioModule} from '@angular/material/radio';
     AdvTrainingsComponent,
     ITSolutionsComponent,
     PlacementsComponent,
-    ContactComponent
+    ContactComponent,
+    ProductListComponent
   ],
   imports: [
     BrowserModule,
