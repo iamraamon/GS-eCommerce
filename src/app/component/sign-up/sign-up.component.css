@@ -1,0 +1,27 @@
+h1{
+    text-align: center;
+    color: rgb(88, 17, 107);
+   
+}
+.email{
+    width: 100%;
+}
+.password{
+    width: 100%;
+}
+input[type=password]{
+    width: 100%;
+}
+.submit{
+    text-align: center !important; 
+    padding-top: 10px;
+} 
+p a{
+    text-decoration: underline;
+}
+p{
+    margin-top: 15px;
+}
+.mobile{
+    width: 100%;
+}

@@ -1,0 +1,14 @@
+/* .example-spacer {
+    flex: 1 1 auto;
+  } */
+  .mat{
+    margin-left: 120px;
+  }
+  .mat a{
+    font-size: 16px;
+    margin-left: 25px;
+  }
+  .btnicon{
+    float:right;
+    margin-left: 120px;
+  }

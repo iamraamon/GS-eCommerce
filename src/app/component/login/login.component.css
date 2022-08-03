@@ -1,0 +1,20 @@
+.example-container .mat-form-field + .mat-form-field {
+    margin-left: 0 auto;
+  }
+
+.submit{
+    text-align: center !important; 
+    padding-top: 10px;
+} 
+.email{
+    width: 100%;
+}
+.password{
+    width: 100%;
+}
+.container-fluid h2{
+    background-color: blueviolet;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 25px;
+}

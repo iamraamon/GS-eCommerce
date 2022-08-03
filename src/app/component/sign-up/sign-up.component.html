@@ -1,0 +1,80 @@
+<h1>----------Register----------</h1>
+<h3>Create your account. It's free and takes only a minute.</h3>
+<div class="example-container">
+      <mat-form-field appearance="fill">
+      <input matInput placeholder="FirstName" required>
+    </mat-form-field>&nbsp;&nbsp;
+
+    <mat-form-field appearance="fill">
+      <input matInput placeholder="LastName" required>
+    </mat-form-field>
+
+    
+      <form class="form-group">
+      <mat-form-field class="email" appearance="fill">
+        <mat-label>Enter your email</mat-label>
+        <input matInput placeholder="pat@example.com" [formControl]="email" required>
+        <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+      </mat-form-field>
+  
+
+      <form [formGroup]="pwForm">
+      <mat-form-field class="password" appearance="fill">
+          <mat-label>Enter your password</mat-label>
+          <input matInput [type]="hide ? 'password' : 'text'" class="form-control" id="password" formControlName="password" required>
+          
+          <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+            <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+          </button>
+          
+        </mat-form-field>
+
+        <mat-form-field class="password" appearance="fill">
+          <mat-label>Confirm password</mat-label>
+          <input matInput [type]="hide ? 'password' : 'text'" [ngClass]='confirmPasswordClass' id="cPassword" formControlName="confirmPassword" required>
+          <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+            <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+          </button>
+          
+      </mat-form-field>
+      <div *ngIf='!passwordsMatching && pwForm.controls["confirmPassword"].dirty '>
+        Passwords did not match
+    </div>
+    
+
+    
+      <mat-form-field class="mobile" appearance="fill">
+        <mat-label>Telephone</mat-label>
+        
+        <input type="tel" matInput placeholder="Mobile Number" required>
+        <mat-icon matSuffix>mode_edit</mat-icon>
+      </mat-form-field>
+    
+     
+      <mat-radio-group aria-label="Select an option">
+        Gender  :  <mat-radio-button value="1">Option 1</mat-radio-button>
+        <mat-radio-button value="2">Option 2</mat-radio-button>
+      </mat-radio-group>
+
+
+
+    <mat-checkbox [formControl]="hideRequiredControl">I accept Terms and Conditions</mat-checkbox>
+    <p>By Creating an account, you agree to our <a style="color:rgb(68, 68, 227);">Terms and Privacy</a></p>
+
+
+      </form>
+
+       
+        <div class="submit">
+          <button mat-raised-button (click)="back()" color="primary" style="margin: left 20px;">Submit</button>
+        </div>
+
+
+      </form>
+    </div>
+
+
+
+
+
+
