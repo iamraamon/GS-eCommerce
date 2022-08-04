@@ -1,4 +1,5 @@
-<h1>----------Register----------</h1>
+
+<h2>REGISTRATION FORM</h2>
 <h3>Create your account. It's free and takes only a minute.</h3>
 <div class="example-container">
       <mat-form-field appearance="fill">
@@ -44,22 +45,30 @@
 
     
       <mat-form-field class="mobile" appearance="fill">
-        <mat-label>Telephone</mat-label>
-        
-        <input type="tel" matInput placeholder="Mobile Number" required>
+        <mat-label>Mobile Number</mat-label>
+        <input type="tel" matInput placeholder="Mobile Number" [formControl]="mobile" required>
         <mat-icon matSuffix>mode_edit</mat-icon>
+        <mat-error *ngIf="mobile.invalid">{{getError()}}</mat-error>
       </mat-form-field>
     
      
       <mat-radio-group aria-label="Select an option">
-        Gender  :  <mat-radio-button value="1">Male</mat-radio-button>
+       Gender  : &nbsp;     <mat-radio-button value="1">Male</mat-radio-button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <mat-radio-button value="2">Female</mat-radio-button>
-      </mat-radio-group>
+      </mat-radio-group><br>
 
+   
 
-
+      <mat-form-field class="dob" appearance="fill">
+        <mat-label>Choose Date of Birth</mat-label>
+        <input matInput [matDatepicker]="picker">
+        <mat-hint>MM/DD/YYYY</mat-hint>
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+      
     <mat-checkbox [formControl]="hideRequiredControl">I accept Terms and Conditions</mat-checkbox>
-    <p>By Creating an account, you agree to our <a style="color:rgb(68, 68, 227);">Terms and Privacy</a></p>
+    <h4>By Creating an account, you agree to our <a href="#" style="color:rgb(68, 68, 227);">Terms and Privacy</a></h4>
 
 
       </form>
@@ -73,7 +82,7 @@
       </form>
     </div>
 
-
+ 
 
 
 

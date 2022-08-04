@@ -7,16 +7,18 @@
     <!-- <span class="example-spacer"></span> -->
         
 
-    <div class="mat">
-      <a mat-button [routerLink]="'/home'"> Home </a>
-      <a mat-button [routerLink]="'/about'"> About </a>
-      <a mat-button [routerLink]="'/IT-trainings'"> IT Trainings </a>
-      <a mat-button [routerLink]="'/Adv-trainings'"> Adv.Trainings </a>
-      <a mat-button [routerLink]="'/IT solutions'"> IT Solutions </a>
-      <a mat-button [routerLink]="'/placements'"> Placements </a>
-      <a mat-button [routerLink]="'/contact'"> Contact </a>
-      <a mat-button [routerLink]="'/product-list'"> Products </a>
-    </div>
+
+      <div class="mat">
+        <a mat-button [routerLink]="'/home'"> Home </a>
+        <a mat-button [routerLink]="'/about'"> About </a>
+        <a mat-button [routerLink]="'/IT-trainings'"> IT Trainings </a>
+        <a mat-button [routerLink]="'/Adv-trainings'"> Adv.Trainings </a>
+        <a mat-button [routerLink]="'/IT solutions'"> IT Solutions </a>
+        <a mat-button [routerLink]="'/placements'"> Placements </a>
+        <a mat-button [routerLink]="'/contact'"> Contact </a>
+        <a mat-button [routerLink]="'/product'"> Product </a>
+      </div>
+
 
   
 
@@ -30,9 +32,11 @@
             <mat-icon>share</mat-icon>
           </button>
     </div>
+    </mat-toolbar>
+ 
 
 
-  </mat-toolbar>
+
 <div>
 <router-outlet></router-outlet>
 </div>

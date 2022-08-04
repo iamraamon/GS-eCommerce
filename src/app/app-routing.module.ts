@@ -21,6 +21,7 @@ const routes: Routes = [];
   { path: 'IT solutions', component: ITSolutionsComponent},
   { path: 'placements', component: PlacementsComponent},
   { path: 'contact', component: ContactComponent},
+  { path: 'product', component: ProductListComponent},
   { path: 'product-list', component: ProductListComponent}
  
   

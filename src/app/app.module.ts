@@ -25,6 +25,8 @@ import { ContactComponent } from './component/contact/contact.component';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatRadioModule} from '@angular/material/radio';
 import { ProductListComponent } from './component/product-list/product-list.component';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
 
 @NgModule({
   declarations: [
@@ -55,7 +57,9 @@ import { ProductListComponent } from './component/product-list/product-list.comp
     FormsModule,
     ReactiveFormsModule,
     MatCheckboxModule,
-    MatRadioModule
+    MatRadioModule,
+    MatDatepickerModule,
+    MatNativeDateModule
   
 
   ],
