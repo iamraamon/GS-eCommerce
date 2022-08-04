@@ -1,14 +1,19 @@
-/* .example-spacer {
-    flex: 1 1 auto;
-  } */
-  .mat{
-    margin-left: 120px;
+.mat-toolbar.mat-primary {
+  white-space: normal !important;
+}
+ .mat{
+    margin-left: 50px;
   }
   .mat a{
     font-size: 16px;
-    margin-left: 25px;
+    margin-left: 10px;
+   
   }
   .btnicon{
-    float:right;
-    margin-left: 120px;
+  /* text-align: flex-end !important;
+  float: right !important; 
+  justify-content: right; */
+  padding-left: 150px;
   }
+
+  

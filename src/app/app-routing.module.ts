@@ -7,6 +7,7 @@ import { AdvTrainingsComponent } from './component/adv-trainings/adv-trainings.c
 import { ITSolutionsComponent } from './component/it-solutions/it-solutions.component';
 import { PlacementsComponent } from './component/placements/placements.component';
 import { ContactComponent } from './component/contact/contact.component';
+import { ProductListComponent } from './component/product-list/product-list.component';
 
 const routes: Routes = [];
 
@@ -20,7 +21,7 @@ const routes: Routes = [];
   { path: 'IT solutions', component: ITSolutionsComponent},
   { path: 'placements', component: PlacementsComponent},
   { path: 'contact', component: ContactComponent},
- 
+  { path: 'product', component: ProductListComponent}
   
   ]),
   ],

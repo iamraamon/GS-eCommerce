@@ -1,3 +1,5 @@
+import { _isNumberValue } from '@angular/cdk/coercion';
+import { NumberFormatStyle } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import {Validators, FormControl} from '@angular/forms';
 import { FormGroup, FormBuilder } from '@angular/forms';
@@ -66,8 +68,13 @@ export class SignUpComponent implements OnInit {
     this.dialogRef.close();
   }
  
-
-
+  mobile = new FormControl('', [Validators.required]);
+  getError(){
+    if (this.mobile.hasError('required')) {
+      return 'Enter valid mobile number';
+    }
+    return this.mobile.hasError('mobile') ? 'Not a valid number' : '';
+  }
   }
 
 

@@ -24,6 +24,9 @@ import { PlacementsComponent } from './component/placements/placements.component
 import { ContactComponent } from './component/contact/contact.component';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatRadioModule} from '@angular/material/radio';
+import { ProductListComponent } from './component/product-list/product-list.component';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
 
 @NgModule({
   declarations: [
@@ -36,7 +39,8 @@ import {MatRadioModule} from '@angular/material/radio';
     AdvTrainingsComponent,
     ITSolutionsComponent,
     PlacementsComponent,
-    ContactComponent
+    ContactComponent,
+    ProductListComponent
   ],
   imports: [
     BrowserModule,
@@ -53,7 +57,9 @@ import {MatRadioModule} from '@angular/material/radio';
     FormsModule,
     ReactiveFormsModule,
     MatCheckboxModule,
-    MatRadioModule
+    MatRadioModule,
+    MatDatepickerModule,
+    MatNativeDateModule
   
 
   ],

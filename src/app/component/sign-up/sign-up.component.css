@@ -1,7 +1,9 @@
-h1{
+
+h2{
     text-align: center;
-    color: rgb(88, 17, 107);
-   
+    color: #fff;
+   background-color: rgb(126, 27, 218);
+    padding: 5px;
 }
 .email{
     width: 100%;
@@ -16,12 +18,21 @@ input[type=password]{
     text-align: center !important; 
     padding-top: 10px;
 } 
-p a{
-    text-decoration: underline;
-}
-p{
+
+h4{
     margin-top: 15px;
 }
 .mobile{
     width: 100%;
+    padding-bottom: 10px;
+}
+.mat-checkbox{
+    padding-top: 25px;
+}
+.mat-radio-group{
+   margin-top: 25px;
+}
+.dob{
+    width: 100%;
+    padding-top: 10px;
 }
