@@ -27,6 +27,7 @@ import {MatRadioModule} from '@angular/material/radio';
 import { ProductListComponent } from './component/product-list/product-list.component';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -59,7 +60,8 @@ import { MatNativeDateModule } from '@angular/material/core';
     MatCheckboxModule,
     MatRadioModule,
     MatDatepickerModule,
-    MatNativeDateModule
+    MatNativeDateModule,
+    HttpClientModule
   
 
   ],

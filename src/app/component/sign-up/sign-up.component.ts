@@ -5,7 +5,8 @@ import {Validators, FormControl} from '@angular/forms';
 import { FormGroup, FormBuilder } from '@angular/forms';
 import { MatDialogRef } from '@angular/material/dialog';
 import { Router } from '@angular/router';
-
+import { users } from 'src/app/model/users.model';
+import { UsersService } from 'src/app/service/users.service';
 
 @Component({
   selector: 'app-sign-up',
@@ -17,6 +18,19 @@ import { Router } from '@angular/router';
 
 
 export class SignUpComponent implements OnInit {
+ users = new FormGroup({
+  firstname: new FormControl(''),
+  lastname: new FormControl(''),
+  email: new FormControl(''),
+  password: new FormControl(''),
+  confirmpassword: new FormControl(''),
+  mobile: new FormControl(''),
+  gender: new FormControl(''),
+  dateofbirth: new FormControl(''),
+ })
+
+
+
   hideRequiredControl = new FormControl(false);
 
 
@@ -30,7 +44,7 @@ export class SignUpComponent implements OnInit {
   passwordsMatching:any;
   confirmPasswordClass:any;
 
-  constructor(private fb: FormBuilder,private _formBuilder: FormBuilder, private router:Router, private dialogRef: MatDialogRef<SignUpComponent>) {
+  constructor(private fb: FormBuilder, private user: UsersService, private _formBuilder: FormBuilder, private router:Router, private dialogRef: MatDialogRef<SignUpComponent>) {
     this.pwForm = this.fb.group({
       password: '',
       confirmPassword: ''
@@ -63,8 +77,25 @@ export class SignUpComponent implements OnInit {
   // For password validation
   hide = true;
 
-  back(){
-    this.router.navigate(['/home']);
+  addUser(){
+    // this.router.navigate(['/home']);
+
+    console.log('Iam in add user');
+    //  data={
+    //   firstname: this.users.firstname,
+    //   lastname: this.users.lastname,
+    //   email: this.users.email,
+    //   password: this.users.password,
+    //   confirmpassword: this.users.confirmpassword,
+    //   mobile: this.users.mobile,
+    //   gender: this.users.gender,
+    //   dateofbirth: this.users.dateofbirth
+    // };
+    this.user.createUser(this.users.value).subscribe((result:any)=>{
+      console.log('the result is', result);
+    
+    });
+
     this.dialogRef.close();
   }
  
