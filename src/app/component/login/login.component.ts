@@ -2,6 +2,7 @@ import { Component} from '@angular/core';
 import {FormControl, Validators} from '@angular/forms';
 import { MatDialogRef } from '@angular/material/dialog';
 import { Router } from '@angular/router';
+import { SignUpComponent } from '../sign-up/sign-up.component';
 
 @Component({
   selector: 'app-login',
@@ -9,7 +10,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent{
-  constructor(private router:Router, private dialogRef: MatDialogRef<LoginComponent>){}
+  constructor(private router:Router, private users:SignUpComponent, private dialogRef: MatDialogRef<LoginComponent>){}
 
 
  
@@ -25,8 +26,11 @@ export class LoginComponent{
 
   hide = true;
   
-  back(){
-    this.router.navigate(['/home']);
+  login(){
+    console.log('Iam in login page');
+    // this.router.navigate(['/home']);
+    this.users.value;
+    console.log('Iam in users login');
     this.dialogRef.close();
   }
   
