@@ -1,53 +1,42 @@
-<!-- <meta http-equiv="refresh" content="5" /> -->
-<mat-toolbar color="primary">
-  <button
-    mat-icon-button
-    class="example-icon"
-    aria-label="Example icon-button with menu icon"
-  >
-    <mat-icon>menu</mat-icon>
-  </button>
-  <span><h1>GUIDESOFT</h1></span>
-  <!-- <span class="example-spacer"></span> -->
 
-  <div class="mat">
-    <a mat-button [routerLink]="'/dashboard'">Dashboard</a>
-    <a mat-button [routerLink]="'/home'"> Home </a>
-    <a mat-button [routerLink]="'/about'"> About </a>
-    <a mat-button [routerLink]="'/users'"> Users List </a>
-    <!--   <a mat-button [routerLink]="'/IT-trainings'"> IT Trainings </a>
+  <mat-toolbar color="primary">
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span><h1>GUIDESOFT</h1></span>
+    <!-- <span class="example-spacer"></span> -->
+        
+
+
+      <div class="mat">
+        <a mat-button [routerLink]="'/home'"> Home </a>
+        <a mat-button [routerLink]="'/about'"> About </a>
+        <a mat-button [routerLink]="'/IT-trainings'"> IT Trainings </a>
         <a mat-button [routerLink]="'/Adv-trainings'"> Adv.Trainings </a>
         <a mat-button [routerLink]="'/IT solutions'"> IT Solutions </a>
         <a mat-button [routerLink]="'/placements'"> Placements </a>
         <a mat-button [routerLink]="'/contact'"> Contact </a>
-        <a mat-button [routerLink]="'/product'"> Product </a> -->
-  </div>
+        <a mat-button [routerLink]="'/product'"> Product </a>
+      </div>
 
-  <div render >
-    Welcome, {{ id }} <br>
 
-     {{guntur_value}}
-    <button mat-raised-button (click)="logout()" color="accent">Logout</button>
-  </div>
+  
 
-  <div class="btnicon">
-    <button mat-raised-button (click)="openDialog()" color="accent">
-      Login</button
-    >
+    <div class="btnicon">
 
-    <button mat-raised-button (click)="opDialog()" color="accent">SignUp</button
-    >
+              <button mat-raised-button (click)="openDialog()" color="accent">Login</button>&nbsp;&nbsp;&nbsp;&nbsp;
 
-    <button
-      mat-icon-button
-      class="example-icon"
-      aria-label="Example icon-button with share icon"
-    >
-      <mat-icon>share</mat-icon>
-    </button>
-  </div>
-</mat-toolbar>
+              <button mat-raised-button (click)="opDialog()" color="accent">SignUp</button>&nbsp;&nbsp;
+              
+          <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+            <mat-icon>share</mat-icon>
+          </button>
+    </div>
+    </mat-toolbar>
+ 
+
+
 
 <div>
-  <router-outlet></router-outlet>
+<router-outlet></router-outlet>
 </div>

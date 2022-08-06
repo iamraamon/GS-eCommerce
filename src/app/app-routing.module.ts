@@ -8,26 +8,21 @@ import { ITSolutionsComponent } from './component/it-solutions/it-solutions.comp
 import { PlacementsComponent } from './component/placements/placements.component';
 import { ContactComponent } from './component/contact/contact.component';
 import { ProductListComponent } from './component/product-list/product-list.component';
-import { DashboardComponent } from './component/dashboard/dashboard.component';
-import { AuthGuard } from './guard/auth.guard';
-import { UserListComponent } from './component/user-list/user-list.component';
 
 const routes: Routes = [];
 
 @NgModule({
   imports: [RouterModule.forRoot([
    
-  { path: 'home', component : HomeComponent, canActivate : [AuthGuard] },
-  { path: 'about', component: AboutComponent, canActivate : [AuthGuard] },
-  { path: 'users', component: UserListComponent, canActivate : [AuthGuard] },
+  { path: 'home', component : HomeComponent},
+  { path: 'about', component: AboutComponent},
   { path: 'IT-trainings', component: ITTrainingsComponent},
   { path: 'Adv-trainings', component: AdvTrainingsComponent},
   { path: 'IT solutions', component: ITSolutionsComponent},
   { path: 'placements', component: PlacementsComponent},
   { path: 'contact', component: ContactComponent},
   { path: 'product', component: ProductListComponent},
-  { path: 'product-list', component: ProductListComponent},
-  { path: 'dashboard', component: DashboardComponent, canActivate : [AuthGuard] }  
+  { path: 'product-list', component: ProductListComponent}
  
   
   ]),
