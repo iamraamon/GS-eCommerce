@@ -3,26 +3,28 @@
 </div>
 
 <div class="example-container">
-  <form [formGroup]="users">
+  <form [formGroup]="loginForm">
     <!-- <form class="example-form"> -->
     <mat-form-field class="email" appearance="fill">
       <mat-label>Enter your email</mat-label>
-      <input matInput placeholder="pat@example.com" [formControl]="email" required>
+      <input matInput  formControlName="email_input" placeholder="pat@example.com"  required>
       <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
     </mat-form-field>
 
     <mat-form-field class="password" appearance="fill">
         <mat-label>Enter your password</mat-label>
-        <input matInput [type]="hide ? 'password' : 'text'" required>
+        <input matInput formControlName="password_input" [type]="hide ? 'password' : 'text'" required>
         <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
           <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
         </button>
       </mat-form-field>
       <h3><a href="#">Forgot Password</a></h3>
 <div class="submit">
-         <button mat-raised-button (click)="login()" color="primary" style="margin: left 20px;"> Submit</button>
-         
+         <button mat-raised-button (click)="loginSubmit()" color="primary" style="margin: left 20px;"> Login Submit</button>
+         <button mat-raised-button (click)="loginRam()" color="primary" style="margin: left 20px;"> Login Ram</button>
+      
         </div>
+        <mat-error *ngIf="message">{{message}}</mat-error>
     <!-- </form> -->
   </form>
   </div>
