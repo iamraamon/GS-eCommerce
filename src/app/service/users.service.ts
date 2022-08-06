@@ -14,6 +14,17 @@ export class UsersService {
     return this.http.post("http://localhost:3000/users/", inputData);
   }
 
+  public checkLogin(inputData:any){
+    console.log('checking the  user');
+    return this.http.get("http://localhost:3000/users?email="+inputData.email_input+"&password="+inputData.password_input);
+  }
+
+
+  public getAllUsers(){
+    console.log('get all the  user');
+    return this.http.get("http://localhost:3000/users");
+  }
+
 
 
 }

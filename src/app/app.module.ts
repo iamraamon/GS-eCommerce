@@ -28,6 +28,9 @@ import { ProductListComponent } from './component/product-list/product-list.comp
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { HttpClientModule } from '@angular/common/http';
+import { DashboardComponent } from './component/dashboard/dashboard.component';
+import { AuthGuard } from './guard/auth.guard';
+import { UserListComponent } from './component/user-list/user-list.component'; 
 
 @NgModule({
   declarations: [
@@ -41,7 +44,9 @@ import { HttpClientModule } from '@angular/common/http';
     ITSolutionsComponent,
     PlacementsComponent,
     ContactComponent,
-    ProductListComponent
+    ProductListComponent,
+    DashboardComponent,
+    UserListComponent
   ],
   imports: [
     BrowserModule,
@@ -65,7 +70,7 @@ import { HttpClientModule } from '@angular/common/http';
   
 
   ],
-  providers: [],
+  providers: [AuthGuard],   
   bootstrap: [AppComponent]
 })
 export class AppModule { }
